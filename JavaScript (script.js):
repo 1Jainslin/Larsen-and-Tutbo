@@ -1,0 +1,25 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const registerBtn = document.getElementById('registerBtn');
+  const modal = document.getElementById('registerModal');
+  const closeBtn = document.querySelector('.close');
+  const registrationForm = document.getElementById('registrationForm');
+
+  registerBtn.addEventListener('click', function () {
+    modal.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  registrationForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Implement form validation and registration logic here
+    // Send verification email with activation link
+
+    // Once registered, redirect to the next screen
+    const userName = document.getElementById('name').value;
+    alert(`Welcome ${userName}`);
+    // You can implement redirection to the next screen here
+  });
+});
